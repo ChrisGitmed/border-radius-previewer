@@ -50,15 +50,15 @@ export default class BorderRadiusPreview extends React.Component {
     return (
       <>
         <div className="preview-box" style={styleObj}></div>
-        <div className="input-row">
-          <span><input type="text" name="corner1" onChange={handleChange} defaultValue="0" placeholder="0"/> px</span>
-          <span><input type="text" name="corner2" onChange={handleChange} defaultValue="0" placeholder="0"/> px</span>
-          <span><input type="text" name="corner3" onChange={handleChange} defaultValue="0" placeholder="0"/> px</span>
-          <span><input type="text" name="corner4" onChange={handleChange} defaultValue="0" placeholder="0"/> px</span>
+        <div className="input-row row">
+          <span><input type="text" name="corner1" onChange={handleChange} placeholder="0"/> px</span>
+          <span><input type="text" name="corner2" onChange={handleChange} placeholder="0"/> px</span>
+          <span><input type="text" name="corner3" onChange={handleChange} placeholder="0"/> px</span>
+          <span><input type="text" name="corner4" onChange={handleChange} placeholder="0"/> px</span>
         </div>
-        <div className="row">
-          <p>border: {styleString}</p>
-          <button>Click to copy to clipboard</button>
+        <div className="copy-row">
+          <p>border-radius: {styleString}</p>
+          <button><span className="lnr lnr-paperclip"></span></button>
         </div>
       </>
     )
