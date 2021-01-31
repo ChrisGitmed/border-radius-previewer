@@ -1,17 +1,28 @@
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif
 }
+
+html {
+  font-size: 1.4rem;
+}
+
 
 nav {
   height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 h1 {
   font-family: "Fira Sans", sans-serif;
+}
+
+input {
+  width: 2rem;
+  font-size: 1.2rem;
 }
 
 .page-container {
@@ -25,5 +36,12 @@ h1 {
   width: 200px;
   margin: auto;
   border-radius: 10%;
-  border: 3px solid red
+  border: 3px solid red;
+  margin-bottom: 2rem;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
