@@ -10,6 +10,7 @@ export default class BorderRadiusPreview extends React.Component {
       corner4: 0
     }
     this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleChange(event) {
@@ -36,8 +37,15 @@ export default class BorderRadiusPreview extends React.Component {
     }
   }
 
+  handleClick(event) {
+    console.log('fired!');
+  }
+
   render() {
-    const { handleChange } = this;
+    const {
+      handleChange,
+      handleClick
+    } = this;
     const {
       corner1,
       corner2,
@@ -58,7 +66,7 @@ export default class BorderRadiusPreview extends React.Component {
         </div>
         <div className="copy-row">
           <p>border-radius: {styleString}</p>
-          <button><span className="lnr lnr-paperclip"></span></button>
+          <button><span className="lnr lnr-paperclip icon" onClick={handleClick}></span></button>
         </div>
       </>
     )

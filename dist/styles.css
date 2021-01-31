@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif
+  font-family: 'Roboto', sans-serif;
+  color: #333
 }
 
 html {
@@ -22,7 +23,7 @@ nav {
 
 input {
   width: 2rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .page-container {
@@ -55,10 +56,14 @@ input {
 }
 
 .copy-row > p {
-  padding-right: 0.25rem;
   font-size: 0.9rem;
+  border: 1px solid red;
+  padding: 0.25rem;
 }
 
+.copy-row > button {
+  width: 1.6rem;
+}
 .row {
   display: flex;
   width: 100%;
