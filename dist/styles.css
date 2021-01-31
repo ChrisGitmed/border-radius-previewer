@@ -28,7 +28,8 @@ input {
 .page-container {
   height: 100vh;
   max-width: 600px;
-  margin: auto
+  margin: auto;
+  padding: 0.5rem;
 }
 
 .test-square {
