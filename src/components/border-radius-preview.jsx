@@ -11,6 +11,7 @@ export default class BorderRadiusPreview extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.copyText = React.createRef();
   }
 
   handleChange(event) {
@@ -38,13 +39,17 @@ export default class BorderRadiusPreview extends React.Component {
   }
 
   handleClick(event) {
-    console.log('fired!');
+    const copyText = this.copyText.current;
+    copyText.select();
+    document.execCommand('copy');
+    alert("Copied the text: " + copyText.value)
   }
 
   render() {
     const {
       handleChange,
-      handleClick
+      handleClick,
+      copyText
     } = this;
     const {
       corner1,
@@ -54,7 +59,8 @@ export default class BorderRadiusPreview extends React.Component {
     } = this.state;
 
     const styleObj = { "borderRadius": `${corner1}px ${corner2}px ${corner3}px ${corner4}px`};
-    const styleString = `${corner1}px ${corner2}px ${corner3}px ${corner4}px`;
+    const styleString = `border-radius: ${corner1}px ${corner2}px ${corner3}px ${corner4}px`;
+
     return (
       <>
         <div className="preview-box" style={styleObj}></div>
@@ -65,7 +71,7 @@ export default class BorderRadiusPreview extends React.Component {
           <span><input type="text" name="corner4" onChange={handleChange} placeholder="0"/> px</span>
         </div>
         <div className="copy-row">
-          <p>border-radius: {styleString}</p>
+          <input type="text" ref={copyText} value={styleString} readOnly/>
           <button><span className="lnr lnr-paperclip icon" onClick={handleClick}></span></button>
         </div>
       </>

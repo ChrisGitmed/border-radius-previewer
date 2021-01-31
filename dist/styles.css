@@ -55,15 +55,17 @@ input {
   padding: .25rem;
 }
 
-.copy-row > p {
-  font-size: 0.9rem;
+.copy-row > input {
+  font-size: 0.8rem;
   border: 1px solid red;
   padding: 0.25rem;
+  width: 70%;
 }
 
 .copy-row > button {
   width: 1.6rem;
 }
+
 .row {
   display: flex;
   width: 100%;
