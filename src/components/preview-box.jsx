@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default class TestSquare extends React.Component {
+export default class PreviewBox extends React.Component {
   render() {
     return (
-      <div className="test-square">
+      <div className="preview-box">
       </div>
     )
   }
