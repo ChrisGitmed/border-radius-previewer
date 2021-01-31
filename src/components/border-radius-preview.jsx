@@ -1,5 +1,4 @@
 import React from 'react';
-import TestSquare from './preview-box';
 
 export default class BorderRadiusPreview extends React.Component {
   constructor(props) {
