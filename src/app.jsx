@@ -1,9 +1,13 @@
 import React from 'react';
+import BorderRadiusPreview from './components/border-radius-preview';
 
 export default class App extends React.Component {
   render() {
     return (
-      <h1>Stay classy San Diego!</h1>
+      <div className="page-container">
+        <nav><h1>Border Radius Previewer</h1></nav>
+        <BorderRadiusPreview />
+      </div>
     )
   }
 }
