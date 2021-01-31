@@ -13,21 +13,26 @@ export default class BorderRadiusPreview extends React.Component {
   }
 
   handleChange(event) {
-    console.log('fired!');
-    console.log('event.target.name: ', event.target.name);
-    console.log('event.target.value: ', event.target.value);
     const {
       name,
       value
     } = event.target;
     if (name === 'corner1') {
-      this.setState({ corner1: value })
+      if (value === '') {
+        this.setState({corner1 : 0})
+      } else this.setState({corner1 : value})
     } else if (name === 'corner2') {
-      this.setState({ corner2: value})
+      if (value === '') {
+        this.setState({ corner2: 0 })
+      } else this.setState({corner2 : value})
     } else if (name === 'corner3') {
-      this.setState({ corner3: value })
+      if (value === '') {
+        this.setState({corner3: 0});
+      } else this.setState({ corner3: value })
     } else if (name === 'corner4') {
-      this.setState({ corner4: value })
+      if (value === '') {
+        this.setState({ corner4: 0 })
+      } else this.setState({ corner4: value })
     }
   }
 
@@ -40,15 +45,20 @@ export default class BorderRadiusPreview extends React.Component {
       corner4
     } = this.state;
 
-    const styleString = { "borderRadius": `${corner1}px ${corner2}px ${corner3}px ${corner4}px`}
+    const styleObj = { "borderRadius": `${corner1}px ${corner2}px ${corner3}px ${corner4}px`};
+    const styleString = `${corner1}px ${corner2}px ${corner3}px ${corner4}px`;
     return (
       <>
-        <div className="preview-box" style={styleString}></div>
+        <div className="preview-box" style={styleObj}></div>
         <div className="input-row">
-          <span><input type="text" name="corner1" onChange={handleChange} placeholder="0"/> px</span>
-          <span><input type="text" name="corner2" onChange={handleChange} placeholder="0"/> px</span>
-          <span><input type="text" name="corner3" onChange={handleChange} placeholder="0"/> px</span>
-          <span><input type="text" name="corner4" onChange={handleChange} placeholder="0"/> px</span>
+          <span><input type="text" name="corner1" onChange={handleChange} defaultValue="0" placeholder="0"/> px</span>
+          <span><input type="text" name="corner2" onChange={handleChange} defaultValue="0" placeholder="0"/> px</span>
+          <span><input type="text" name="corner3" onChange={handleChange} defaultValue="0" placeholder="0"/> px</span>
+          <span><input type="text" name="corner4" onChange={handleChange} defaultValue="0" placeholder="0"/> px</span>
+        </div>
+        <div className="row">
+          <p>border: {styleString}</p>
+          <button>Click to copy to clipboard</button>
         </div>
       </>
     )
