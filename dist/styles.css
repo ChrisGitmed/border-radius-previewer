@@ -10,6 +10,7 @@ html {
 
 h1 {
   font-family: "Fira Sans", sans-serif;
+  margin: 1rem;
 }
 
 p {
@@ -18,7 +19,8 @@ p {
 
 nav {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #333;
 }
 
 input {
