@@ -65,14 +65,14 @@ export default class BorderRadiusPreview extends React.Component {
       <>
         <div className="preview-box" style={styleObj}></div>
         <div className="input-row row">
-          <span><input type="text" name="corner1" onChange={handleChange} placeholder="0"/> px</span>
-          <span><input type="text" name="corner2" onChange={handleChange} placeholder="0"/> px</span>
-          <span><input type="text" name="corner3" onChange={handleChange} placeholder="0"/> px</span>
-          <span><input type="text" name="corner4" onChange={handleChange} placeholder="0"/> px</span>
+          <input type="text" name="corner1" onChange={handleChange} placeholder="0"/>
+          <input type="text" name="corner2" onChange={handleChange} placeholder="0"/>
+          <input type="text" name="corner3" onChange={handleChange} placeholder="0"/>
+          <input type="text" name="corner4" onChange={handleChange} placeholder="0"/>
         </div>
         <div className="copy-row">
-          <input type="text" ref={copyText} value={styleString} readOnly/>
-          <button><span className="lnr lnr-paperclip icon" onClick={handleClick}></span></button>
+          <input type="text" name="copy-text" ref={copyText} value={styleString} readOnly/>
+          <button className="" onClick={handleClick}>COPY</button>
         </div>
       </>
     )
