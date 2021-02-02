@@ -1,7 +1,9 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  color: #333
+  color: whitesmoke;
+  background-image: url('./images/cosmic.jpeg');
+  background-size:cover;
 }
 
 html {
@@ -20,19 +22,25 @@ p {
 nav {
   text-align: center;
   margin-bottom: 2rem;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid whitesmoke;
+}
+
+label {
+  font-size: 0.9rem;
 }
 
 input {
   width: 2rem;
   font-size: 1rem;
+  padding: 0.25rem;
+  color: #333;
 }
 
 .page-container {
   height: 100vh;
   max-width: 600px;
   margin: auto;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .preview-box {
@@ -40,7 +48,7 @@ input {
   width: 200px;
   margin: auto;
   border-radius: 0;
-  border: 3px solid red;
+  background-image: linear-gradient(45deg, #3023AE 0%, #f09 100%);
   margin-bottom: 2rem;
 }
 
@@ -53,19 +61,24 @@ input {
 .copy-row {
   display: flex;
   justify-content: center;
-  margin: auto;
-  padding: .25rem;
+  align-items: center
 }
 
 .copy-row > input {
   font-size: 0.8rem;
-  border: 1px solid red;
-  padding: 0.25rem;
+  border: 2px solid #f09;
+  padding: 0.5rem;
   width: 70%;
+  cursor: initial;
 }
 
 .copy-row > button {
-  width: 1.6rem;
+  cursor: pointer;
+  color: whitesmoke;
+  background-color: #f09;
+  border: 2px solid #f09;
+  font-size: 0.8rem;
+  padding: 0.5rem .5rem;
 }
 
 .row {
