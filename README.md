@@ -1,5 +1,5 @@
 # border-radius-previewer
-A simple React app created to help understand how the border-radius property effects elements.
+A simple React app created to practice with CSS and React, and better understand how the border-radius property effects elements.
 
 ### What I learned
 * How to copy things to users clipboard by using the .select() method on a React Ref, followed by document.execCommand('copy');
